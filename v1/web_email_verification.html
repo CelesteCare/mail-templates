@@ -3,6 +3,7 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Celeste email verification</title>
@@ -89,8 +90,7 @@
 	</style>
 
 	<!-- Custom styles-->
-	<style>
-		.mail-mistake-message{color: rgb(247, 83, 96)}
+	<style>	
 	</style>
 	<!-- Custom styles-->
 
@@ -116,12 +116,13 @@
 										<table width="580" align="center" border="0" cellspacing="0" cellpadding="0">
 											<tr>
 												<td class="text-center text-white">
-													<h1>Welcome to Celeste</h1>
+													<h1>${welcome_message}<span>&#x1F973</span></h1>
 												</td>
 											</tr>
 											<tr>
 												<td class="text-center text-white">
-													<p class="h3">Hello ${first_name}. Thanks for creating an account with us, please click on the button bellow to verify your email addres</p>
+													<p class="h3">${hero_message}</p>
+													<span>&#x1F447;</span>
 												</td>
 											</tr>
 											<tr>
@@ -129,7 +130,7 @@
 													<table class="button mx-auto" border="0" cellpadding="0" cellspacing="0" align="center">
 														<tr>
 															<td>
-																<a href="${verification_url}" class="font-bold">Click here to confirm your account!</a>
+																<a href="${verification_url}" class="font-bold">${verification_button_text}</a>
 															</td>
 														</tr>
 													</table>
@@ -150,9 +151,10 @@
 				<table class="container bg-white" width="660" align="center" border="0" cellpadding="0" cellspacing="0">
 					<tr>
 						<td class="text-center">
-							<strong class="font-italic mail-mistake-message">
+							<strong class="italic">
 								If you did not request this code please ignore this message!
 							</strong>
+							<span>&#x1F937;</span>
 						</td><!-- /.column -->
 					</tr>
 				</table><!-- /.container -->
